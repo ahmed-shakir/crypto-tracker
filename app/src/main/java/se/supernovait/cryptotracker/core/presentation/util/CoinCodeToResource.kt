@@ -1,4 +1,4 @@
-package se.supernovait.cryptotracker.util
+package se.supernovait.cryptotracker.core.presentation.util
 
 import se.supernovait.cryptotracker.R
 

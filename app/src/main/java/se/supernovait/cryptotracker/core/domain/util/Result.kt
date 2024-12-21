@@ -1,4 +1,4 @@
-package se.supernovait.cryptotracker.util
+package se.supernovait.cryptotracker.core.domain.util
 
 typealias DomainError = Error
 
