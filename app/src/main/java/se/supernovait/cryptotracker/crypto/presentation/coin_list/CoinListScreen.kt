@@ -61,9 +61,9 @@ private fun CoinListScreenPreview() {
                     previewCoin.copy(id = it.toString())
                 }
             ),
+            onAction = {},
             modifier = Modifier
-                .background(MaterialTheme.colorScheme.background),
-            onAction = {}
+                .background(MaterialTheme.colorScheme.background)
         )
     }
 }
