@@ -40,9 +40,7 @@ fun CoinListScreen(
             items(state.coins) { coinUi ->
                 CoinListItem(
                     coinUi = coinUi,
-                    onClick = {
-                        onAction(CoinListAction.OnCoinClick(coinUi))
-                    },
+                    onClick = { onAction(CoinListAction.OnCoinClick(coinUi)) },
                     modifier = Modifier.fillMaxWidth()
                 )
                 HorizontalDivider()
@@ -62,8 +60,7 @@ private fun CoinListScreenPreview() {
                 }
             ),
             onAction = {},
-            modifier = Modifier
-                .background(MaterialTheme.colorScheme.background)
+            modifier = Modifier.background(MaterialTheme.colorScheme.background)
         )
     }
 }

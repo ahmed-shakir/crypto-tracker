@@ -15,6 +15,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import org.koin.androidx.compose.koinViewModel
 import se.supernovait.cryptotracker.core.presentation.util.ObserveAsEvents
 import se.supernovait.cryptotracker.core.presentation.util.toString
+import se.supernovait.cryptotracker.crypto.presentation.coin_detail.CoinDetailScreen
 import se.supernovait.cryptotracker.crypto.presentation.coin_list.CoinListEvent
 import se.supernovait.cryptotracker.crypto.presentation.coin_list.CoinListScreen
 import se.supernovait.cryptotracker.crypto.presentation.coin_list.CoinListViewModel
@@ -37,11 +38,21 @@ class MainActivity : ComponentActivity() {
                             }
                         }
                     }
-                    CoinListScreen(
-                        state = state,
-                        onAction = viewModel::onAction,
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    when {
+                        state.selectedCoin != null -> {
+                            CoinDetailScreen(
+                                state = state,
+                                modifier = Modifier.padding(innerPadding)
+                            )
+                        }
+                        else -> {
+                            CoinListScreen(
+                                state = state,
+                                onAction = viewModel::onAction,
+                                modifier = Modifier.padding(innerPadding)
+                            )
+                        }
+                    }
                 }
             }
         }
