@@ -1,7 +1,11 @@
 package se.supernovait.cryptotracker.crypto.data.mappers
 
 import se.supernovait.cryptotracker.crypto.data.network.dto.CoinDto
+import se.supernovait.cryptotracker.crypto.data.network.dto.CoinPriceDto
 import se.supernovait.cryptotracker.crypto.domain.Coin
+import se.supernovait.cryptotracker.crypto.domain.CoinPrice
+import java.time.Instant
+import java.time.ZoneId
 
 fun CoinDto.toCoin(): Coin {
     return Coin(
@@ -12,5 +16,14 @@ fun CoinDto.toCoin(): Coin {
         marketCapUsd = this.marketCapUsd,
         priceUsd = this.priceUsd,
         changePercent24Hr = this.changePercent24Hr
+    )
+}
+
+fun CoinPriceDto.toCoinPrice(): CoinPrice {
+    return CoinPrice(
+        priceUsd = this.priceUsd,
+        dateTime = Instant
+            .ofEpochMilli(this.time)
+            .atZone(ZoneId.of("UTC"))
     )
 }
