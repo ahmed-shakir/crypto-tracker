@@ -7,7 +7,7 @@ import org.koin.dsl.bind
 import org.koin.dsl.module
 import se.supernovait.cryptotracker.core.data.network.HttpClientFactory
 import se.supernovait.cryptotracker.crypto.data.network.RemoteCoinDataSource
-import se.supernovait.cryptotracker.crypto.domain.CoinDataSource
+import se.supernovait.cryptotracker.crypto.domain.coin.CoinDataSource
 import se.supernovait.cryptotracker.crypto.presentation.coin_list.CoinListViewModel
 
 val appModule = module {

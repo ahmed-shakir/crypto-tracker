@@ -2,8 +2,9 @@ package se.supernovait.cryptotracker.crypto.presentation.models
 
 import android.icu.text.NumberFormat
 import androidx.annotation.DrawableRes
-import se.supernovait.cryptotracker.crypto.domain.Coin
 import se.supernovait.cryptotracker.core.presentation.util.getDrawableIdForCoin
+import se.supernovait.cryptotracker.crypto.domain.chart.DataPoint
+import se.supernovait.cryptotracker.crypto.domain.coin.Coin
 import java.util.Locale
 
 data class CoinUi(
@@ -15,7 +16,7 @@ data class CoinUi(
     val priceUsd: DisplayableNumber,
     val changePercent24Hr: DisplayableNumber,
     @DrawableRes val iconRes: Int,
-    //val coinPriceHistory: List<DataPoint> = emptyList()
+    val coinPriceHistory: List<DataPoint> = emptyList()
 )
 
 data class DisplayableNumber(

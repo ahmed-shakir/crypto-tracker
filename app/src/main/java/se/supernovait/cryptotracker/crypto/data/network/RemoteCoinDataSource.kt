@@ -12,9 +12,9 @@ import se.supernovait.cryptotracker.crypto.data.mappers.toCoin
 import se.supernovait.cryptotracker.crypto.data.mappers.toCoinPrice
 import se.supernovait.cryptotracker.crypto.data.network.dto.CoinHistoryDto
 import se.supernovait.cryptotracker.crypto.data.network.dto.CoinsResponseDto
-import se.supernovait.cryptotracker.crypto.domain.Coin
-import se.supernovait.cryptotracker.crypto.domain.CoinDataSource
-import se.supernovait.cryptotracker.crypto.domain.CoinPrice
+import se.supernovait.cryptotracker.crypto.domain.coin.Coin
+import se.supernovait.cryptotracker.crypto.domain.coin.CoinDataSource
+import se.supernovait.cryptotracker.crypto.domain.coin.CoinPrice
 import java.time.ZoneId
 import java.time.ZonedDateTime
 

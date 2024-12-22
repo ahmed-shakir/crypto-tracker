@@ -1,4 +1,4 @@
-package se.supernovait.cryptotracker.crypto.domain
+package se.supernovait.cryptotracker.crypto.domain.coin
 
 data class Coin(
     val id: String,

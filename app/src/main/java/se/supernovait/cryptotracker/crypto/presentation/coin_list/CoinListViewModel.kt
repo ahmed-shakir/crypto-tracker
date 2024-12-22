@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import se.supernovait.cryptotracker.core.domain.util.onError
 import se.supernovait.cryptotracker.core.domain.util.onSuccess
-import se.supernovait.cryptotracker.crypto.domain.CoinDataSource
+import se.supernovait.cryptotracker.crypto.domain.coin.CoinDataSource
 import se.supernovait.cryptotracker.crypto.presentation.models.CoinUi
 import se.supernovait.cryptotracker.crypto.presentation.models.toCoinUi
 import java.time.ZonedDateTime

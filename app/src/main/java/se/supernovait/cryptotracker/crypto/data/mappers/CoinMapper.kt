@@ -2,8 +2,8 @@ package se.supernovait.cryptotracker.crypto.data.mappers
 
 import se.supernovait.cryptotracker.crypto.data.network.dto.CoinDto
 import se.supernovait.cryptotracker.crypto.data.network.dto.CoinPriceDto
-import se.supernovait.cryptotracker.crypto.domain.Coin
-import se.supernovait.cryptotracker.crypto.domain.CoinPrice
+import se.supernovait.cryptotracker.crypto.domain.coin.Coin
+import se.supernovait.cryptotracker.crypto.domain.coin.CoinPrice
 import java.time.Instant
 import java.time.ZoneId
 
