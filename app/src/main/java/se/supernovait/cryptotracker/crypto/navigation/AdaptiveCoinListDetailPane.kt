@@ -1,4 +1,4 @@
-package se.supernovait.cryptotracker.core.navigation
+package se.supernovait.cryptotracker.crypto.navigation
 
 import android.widget.Toast
 import androidx.compose.material3.adaptive.ExperimentalMaterial3AdaptiveApi

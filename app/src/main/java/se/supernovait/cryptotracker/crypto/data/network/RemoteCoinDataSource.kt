@@ -19,6 +19,7 @@ import java.time.ZoneId
 import java.time.ZonedDateTime
 
 class RemoteCoinDataSource(private val httpClient: HttpClient) : CoinDataSource {
+    private val zoneIdUTC = "UTC"
 
     override suspend fun getCoins(): Result<List<Coin>, NetworkError> {
         return safeCall<CoinsResponseDto> {
@@ -34,11 +35,11 @@ class RemoteCoinDataSource(private val httpClient: HttpClient) : CoinDataSource 
         end: ZonedDateTime
     ): Result<List<CoinPrice>, NetworkError> {
         val startMs = start
-            .withZoneSameInstant(ZoneId.of("UTC"))
+            .withZoneSameInstant(ZoneId.of(zoneIdUTC))
             .toInstant()
             .toEpochMilli()
         val endMs = end
-            .withZoneSameInstant(ZoneId.of("UTC"))
+            .withZoneSameInstant(ZoneId.of(zoneIdUTC))
             .toInstant()
             .toEpochMilli()
         return safeCall<CoinHistoryDto> {

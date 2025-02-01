@@ -1,5 +1,6 @@
 package se.supernovait.cryptotracker.core.domain.util
 
+typealias EmptyResult<E> = Result<Unit, E>
 typealias DomainError = Error
 
 sealed interface Result<out D, out E: Error> {
@@ -27,6 +28,7 @@ inline fun <T, E: Error> Result<T, E>.onSuccess(action: (T) -> Unit): Result<T, 
         }
     }
 }
+
 inline fun <T, E: Error> Result<T, E>.onError(action: (E) -> Unit): Result<T, E> {
     return when(this) {
         is Result.Error -> {
@@ -36,5 +38,3 @@ inline fun <T, E: Error> Result<T, E>.onError(action: (E) -> Unit): Result<T, E>
         is Result.Success -> this
     }
 }
-
-typealias EmptyResult<E> = Result<Unit, E>

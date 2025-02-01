@@ -87,7 +87,7 @@ private fun CoinListItemPreview() {
     CryptoTrackerTheme {
         CoinListItem(
             coinUi = previewCoin,
-            onClick = { /*TODO*/ },
+            onClick = { },
             modifier = Modifier.background(
                 MaterialTheme.colorScheme.background
             )
