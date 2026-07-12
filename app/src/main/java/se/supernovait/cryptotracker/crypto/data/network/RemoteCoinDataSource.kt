@@ -8,13 +8,13 @@ import se.supernovait.cryptotracker.core.data.network.safeCall
 import se.supernovait.cryptotracker.core.domain.util.NetworkError
 import se.supernovait.cryptotracker.core.domain.util.Result
 import se.supernovait.cryptotracker.core.domain.util.map
-import se.supernovait.cryptotracker.crypto.data.mappers.toCoin
-import se.supernovait.cryptotracker.crypto.data.mappers.toCoinPrice
 import se.supernovait.cryptotracker.crypto.data.network.dto.CoinHistoryDto
 import se.supernovait.cryptotracker.crypto.data.network.dto.CoinsResponseDto
 import se.supernovait.cryptotracker.crypto.domain.coin.Coin
 import se.supernovait.cryptotracker.crypto.domain.coin.CoinDataSource
 import se.supernovait.cryptotracker.crypto.domain.coin.CoinPrice
+import se.supernovait.cryptotracker.crypto.domain.mappers.toCoin
+import se.supernovait.cryptotracker.crypto.domain.mappers.toCoinPrice
 import java.time.ZoneId
 import java.time.ZonedDateTime
 

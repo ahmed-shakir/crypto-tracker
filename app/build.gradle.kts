@@ -1,10 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
-    alias(libs.plugins.compose.compiler)
 }
-
 
 android {
     namespace = "se.supernovait.cryptotracker"
@@ -61,19 +60,14 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
 
     implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.bundles.koin)
+    implementation(libs.bundles.ktor)
     implementation(libs.bundles.compose)
     debugImplementation(libs.bundles.compose.debug)
-
-    coreLibraryDesugaring(libs.desugar.jdk.libs)
-
-    implementation(libs.bundles.koin)
-
-    implementation(libs.bundles.ktor)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.bundles.androidx.test)
 
     testImplementation(libs.junit)
 
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.ui.test.junit4)
+    coreLibraryDesugaring(libs.desugar.jdk.libs)
 }

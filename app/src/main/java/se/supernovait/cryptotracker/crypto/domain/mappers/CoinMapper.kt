@@ -1,4 +1,4 @@
-package se.supernovait.cryptotracker.crypto.data.mappers
+package se.supernovait.cryptotracker.crypto.domain.mappers
 
 import se.supernovait.cryptotracker.crypto.data.network.dto.CoinDto
 import se.supernovait.cryptotracker.crypto.data.network.dto.CoinPriceDto
